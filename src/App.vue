@@ -1,16 +1,18 @@
 <template>
   <toast :style="'z-index: 2000;'"/>
   <div class="app">
-      <LoadingPage></LoadingPage>
+      <LoginPage></LoginPage>
   </div>
 </template>
 
 <script>
 
-import LoadingPage from "@/pages/LoadingPage.vue"
+
+
+import LoginPage from "@/pages/LoginPage.vue";
 export default {
   components: {
-     LoadingPage
+    LoginPage
   }
 }
 </script>

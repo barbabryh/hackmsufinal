@@ -75,8 +75,10 @@
   }
   </script>
   
-  <style scoped>
-body {
+<style scoped>
+
+
+* {
     overflow: hidden;
 }
 
