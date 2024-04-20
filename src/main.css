@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url(/fonts/Helvetica-Medium.ttf) format("truetype");
+    src: url(/fonts/Helvetica-Regular.ttf) format("truetype");
+}
+
+html, body {
+    font-family: Helvetica, sans-serif;
+}

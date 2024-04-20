@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <toast :style="'z-index: 2000;'"/>
+  <div class="app">
+      <LoadingPage></LoadingPage>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import LoadingPage from "@/pages/LoadingPage.vue"
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+     LoadingPage
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 </style>
