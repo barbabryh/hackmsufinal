@@ -1,16 +1,39 @@
 <template>
-    <div id="profile1"></div>
-    <p class="sign_in_text">Вход</p>
-    <button class="sign_in_button">Войти</button>
-    <input type="email" class="login" placeholder="Логин">
-    <input type="password" class="code" placeholder="Пароль">
-
-    <div class="back">
-        <img class="back0" src="../iconsMain/gradient.svg"> 
+    <div id="profile1">
+        <p class="sign_in_text">Вход</p>
+        <form>
+            <button class="sign_in_button" type="submit" @click.prevent="validateInput">Войти</button>
+            <input v-model="Login1" type="text" class="Login1" id="Login1" placeholder="Логин" ref="loginInput">
+            <input v-model="Password" type="password" class="code" placeholder="Пароль" ref="passwordInput">
+        </form>
+        <div class="back">
+            <img class="back0" src="../iconsMain/gradient.svg"> 
+        </div>
+        <p class="error_message">{{ errorMessage }}</p> <!-- Добавлен вывод сообщения об ошибке -->
     </div>
 </template>
-<script>
 
+<script>
+export default {
+  data() {
+    return {
+      Login1: '',
+      Password: '',
+      errorMessage: '',
+    }
+  },
+  methods: {
+    validateInput(e) {
+      if (this.Login1 && this.Login1.length > 1 && this.Password && this.Password.length > 1) {
+          // Переход на страницу профиля
+          this.$router.push('/main');
+      } else {
+        this.errorMessage = 'Логин и пароль должны быть длиннее одного символа.';
+      }
+      e.preventDefault(); // Предотвращение стандартного поведения отправки формы
+    }
+  }
+}
 </script>
 <style scoped>
 *{
@@ -93,7 +116,7 @@
     z-index: 3;
 }
 
-.login{
+.Login1{
     position: absolute;
     text-align: center;
     border: none;
@@ -149,5 +172,12 @@ margin-top: 18%;
     margin-top: 30%;
     margin-left: 43%;
     background-color: #D5DF7C;
+}
+.error_message {
+  position: absolute;
+  color: red;
+  font-size: 1vw;
+  margin-top: 35%;
+  margin-left: 40%;
 }
 </style>

@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import LoginPage from "@/pages/LoginPage.vue";
 import MainPage from "@/pages/MainPage.vue";
-import Profile from "@/pages/ProfilePage.vue";
+import ProfilePage from "@/pages/ProfilePage.vue";
 import Schedule from "@/pages/Schedule.vue";
 import Sections from "@/pages/Sections.vue";
 
@@ -22,7 +22,7 @@ const routes = [
     },
     {
         path: '/profile',
-        component: Profile
+        component: ProfilePage
     },
     {
         path: '/schedule',
