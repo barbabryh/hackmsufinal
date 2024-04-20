@@ -3,30 +3,26 @@ import { createRouter, createWebHistory } from "vue-router";
 import LoginPage from "@/pages/LoginPage.vue";
 import MainPage from "@/pages/MainPage.vue";
 import ProfilePage from "@/pages/ProfilePage.vue";
-import Schedule from "@/pages/Schedule.vue";
-import Sections from "@/pages/Sections.vue";
+import LoadingPage from "@/pages/LoadingPage.vue";
 
 
 const routes = [
     {
-        path: '/',
+        path: '/l',
         component: LoginPage
     },
     {
         path: '/main',
         component: MainPage
     },
-    {
-        path: '/sections',
-        component: Sections
-    },
+
     {
         path: '/profile',
         component: ProfilePage
     },
     {
-        path: '/schedule',
-        component: Schedule
+        path: '/',
+        component: LoadingPage
     }
 ]
 

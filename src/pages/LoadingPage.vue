@@ -1,4 +1,5 @@
 <template>
+
     <div class="page">
     <div class="back">
         <img class="back0" src="../iconsMain/gradient.svg"> 
@@ -18,7 +19,13 @@
   </template>
   
   <script>
-
+export default {
+  created() {
+    setTimeout(() => {
+      this.$router.push({ path: '/main' });
+    }, 2000); 
+  }
+}
   </script>
   
 <style scoped>

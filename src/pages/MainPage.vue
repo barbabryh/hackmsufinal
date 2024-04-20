@@ -4,7 +4,7 @@
         <router-link to="/schedule" id="schedule">Расписание</router-link>
         <router-link to="/teams" id="teams">Сборные</router-link>
         <router-link to="/other" id="other">Другое</router-link>
-        <router-link to="/profile" id="profile" class="profile">Аккаунт</router-link>
+        <router-link to="/l" id="profile" class="profile">Аккаунт</router-link>
       </div>
       <div class="navbar"></div>
       <div class="hover_green">

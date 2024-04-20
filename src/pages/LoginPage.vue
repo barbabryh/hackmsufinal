@@ -26,7 +26,7 @@ export default {
     validateInput(e) {
       if (this.Login1 && this.Login1.length > 1 && this.Password && this.Password.length > 1) {
           // Переход на страницу профиля
-          this.$router.push('/main');
+          this.$router.push('/profile');
       } else {
         this.errorMessage = 'Логин и пароль должны быть длиннее одного символа.';
       }

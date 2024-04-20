@@ -1,7 +1,7 @@
 <template>
   <toast :style="'z-index: 2000;'"/>
   <div class="app">
-      <LoginPage></LoginPage>
+      <router-view></router-view>
   </div>
 </template>
 
@@ -9,10 +9,10 @@
 
 
 
-import LoginPage from "@/pages/LoginPage.vue";
+
 export default {
   components: {
-    LoginPage
+    
   }
 }
 </script>
